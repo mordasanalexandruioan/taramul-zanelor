@@ -66,7 +66,7 @@ body {
     flex-direction: row;
     align-items: center;
     width: 100%;
-    padding: .90em;
+    padding: .90em 0;
     border-bottom: solid 1px rgb(235, 235, 235);
     position: relative;
 }
@@ -129,6 +129,10 @@ body {
     color: rgb(255, 72, 128);
 }
 
+.bee {
+    margin-top: 1.4em;
+}
+
 
 /*=================================================================
 INTRO SITE
@@ -143,6 +147,7 @@ INTRO SITE
     font-size: 1.2rem;
     font-weight: 600;
     position: relative;
+    overflow: hidden;
 }
 
 .intro-site img {
@@ -153,10 +158,354 @@ INTRO SITE
     width: 100px;
 }
 
-.intro-site .intro-title {
+.title {
     color: rgb(255, 72, 128);
+    font-weight: 400;
+    padding: 0 3em;
+}
+
+.subtitle {
+    color: rgb(39, 19, 68);
+    font-size: 2.5rem;
+    padding: 0 .5em;
+    line-height: 1.2;
+}
+
+.intro-site .intro-title {
+    margin-top: .4em;
+    padding: 0;
 }
 
 .intro-site .intro-subtitle {
     color: rgb(39, 19, 68);
+    font-style: italic;
+    margin: .6em 0 1.5em;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.button {
+    background-color: rgb(255, 72, 128);
+    text-decoration: none;
+    color: white;
+    width: 200px;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: .7em;
+    padding: .8em 0;
+    text-transform: capitalize;
+    display: block;
+}
+
+.button i {
+    background-color: white;
+    color: rgb(255, 72, 128);
+    padding: .3em;
+    border-radius: 50%;
+    font-size: .88rem;
+    margin-left: 1em;
+}
+
+.intro-site img,
+.intro-site .intro-title,
+.intro-site .intro-subtitle,
+.intro-site a {
+    z-index: 1;
+}
+
+.intro-site:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgb(255, 255, 255) 32%, transparent);
+}
+
+.intro-site:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 5%;
+    bottom: 10px;
+    left: 0;
+    background: linear-gradient(0deg, rgba(177, 177, 177, 0.493) 0%, transparent 100%);
+}
+
+.intro-site .wave {
+    position: absolute;
+    width: 100%;
+    min-width: 320px;
+    left: 0;
+    bottom: 0;
+}
+
+
+/*======================================================
+CHOSE US
+======================================================*/
+
+.choseUs {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.choseUs span {
+    padding: 0 2em;
+    color: rgb(148, 147, 147);
+}
+
+.choseUs-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2em;
+    margin-top: 1.7em;
+}
+
+.choseUs-cards .card {
+    padding: 3em 1em .8em;
+    margin-top: 1.8em;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.choseUs-cards .card h3 {
+    font-size: 1.5rem;
+}
+
+.choseUs-cards .card .cardImg {
+    border: dashed 2px white;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.choseUs-cards .card img {
+    width: 160px;
+    height: 160px;
+    max-width: 160px;
+    border-radius: 50%;
+}
+
+.choseUs-cards .cRed {
+    background-color: rgb(255, 102, 102);
+    border-bottom: solid 10px rgb(245, 60, 60);
+}
+
+.choseUs-cards .cYellow {
+    background-color: rgb(255, 192, 0);
+    border-bottom: solid 10px rgb(221, 167, 2);
+}
+
+.choseUs-cards .cGreen {
+    background-color: rgb(171, 205, 82);
+    border-bottom: solid 10px rgb(147, 180, 61);
+}
+
+.choseUs-cards .cBlue {
+    background-color: rgb(26, 185, 255);
+    border-bottom: solid 10px rgb(3, 145, 208);
+}
+
+.choseUs-signUp {
+    padding: 0 1.9em 1.24em;
+    text-align: left;
+}
+
+.choseUs-signUp span {
+    padding: 0;
+    color: rgb(255, 72, 128);
+}
+
+.choseUs-signUp h2 {
+    color: rgb(39, 19, 68);
+    margin-top: 2em;
+}
+
+.choseUs-signUp p {
+    font-weight: 500;
+    color: rgb(148, 147, 147);
+    margin-bottom: 2em;
+}
+
+
+/*====================================================================
+GUIDE
+===================================================================*/
+
+.guide {
+    background-color: rgb(252, 249, 244);
+    padding: 1em 1.24em;
+    color: rgb(148, 147, 147);
+}
+
+.guide img {
+    width: 100%;
+}
+
+.guide h2 {
+    color: rgb(39, 19, 68);
+    font-size: 1.8rem;
+}
+
+.guide span {
+    color: rgb(97, 102, 107);
+    font-weight: 500;
+}
+
+.guide .guide-secondP {
+    padding: 0 .4em;
+}
+
+.guide .guide-secondP p {
+    margin-top: 0;
+}
+
+.guide .guide-secondP span {
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.guide .button {
+    color: rgb(255, 72, 128);
+    border: solid 2px rgb(255, 72, 128);
+    background-color: transparent;
+    font-weight: 600;
+    margin: .5em auto;
+}
+
+.guide .button i {
+    background-color: rgb(255, 72, 128);
+    color: white;
+}
+
+
+/*===========================================================
+OUR VALUES
+===========================================================*/
+
+.ourValues,
+.oV-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ourValues {
+    padding: 0 1.24em;
+}
+
+.oV-header {
+    text-align: center;
+    padding-top: 3em;
+}
+
+.oV-header span {
+    color: rgb(97, 102, 107);
+}
+
+.oV-header .subtitle {
+    margin: 0;
+}
+
+.oV-header .title {
+    margin: 2.5em 0 0 0;
+}
+
+.oV-header .rocket,
+.ourValues .rac {
+    margin: 3em 0;
+}
+
+.ourValues .ov-img {
+    width: 35px;
+    height: 35px;
+}
+
+.oV-love .ov-img {
+    background-color: rgb(226, 85, 85);
+}
+
+.ov-trust .ov-img {
+    background-color: rgb(64, 239, 129);
+}
+
+.ov-development .ov-img {
+    background-color: rgb(26, 185, 255);
+}
+
+.ov-cautation .ov-img {
+    background-color: rgb(255, 192, 0);
+}
+
+.ov-connect .ov-img {
+    background-color: rgb(235, 213, 156);
+}
+
+.oV-love .ov-img,
+.ov-trust .ov-img,
+.ov-development .ov-img,
+.ov-cautation .ov-img,
+.ov-connect .ov-img {
+    padding: 1.1em;
+    border-radius: 50%;
+    margin-bottom: 1em;
+}
+
+.oV-love,
+.ov-trust,
+.ov-development,
+.ov-cautation,
+.ov-connect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 3em;
+}
+
+.gray-text {
+    color: rgb(148, 147, 147);
+}
+
+.title-color {
+    color: rgb(39, 19, 68);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.ourValues .ov-connect {
+    align-items: flex-end;
+    width: 134px;
+    padding: 0;
+    margin-left: auto;
+}
+
+
+/*================================================
+STUDY
+================================================*/
+
+.study {
+    background-color: rgb(39, 19, 68);
+    color: #fff;
+    padding: 3em 1.24em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
