@@ -496,6 +496,12 @@ OUR VALUES
     margin-left: auto;
 }
 
+.child {
+    width: 100%;
+    margin: 3em 0;
+    min-width: 303px;
+}
+
 
 /*================================================
 STUDY
@@ -508,4 +514,281 @@ STUDY
     display: flex;
     flex-direction: column;
     justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.study .bee {
+    width: 99px;
+}
+
+.study h2 {
+    font-size: 2.5rem;
+}
+
+.study .bear {
+    background-color: rgb(255, 239, 239);
+}
+
+.study .car {
+    background-color: rgb(255, 249, 229);
+}
+
+.study .rubic {
+    background-color: rgb(238, 245, 220);
+}
+
+.study .cubs {
+    background-color: rgb(232, 248, 255);
+}
+
+.study .tambal {
+    background-color: rgb(255, 72, 128);
+}
+
+.study .tambal img {
+    width: 31px;
+    height: 31px;
+}
+
+.study .area-uppercontent {
+    display: flex;
+    flex-direction: row;
+}
+
+.study .area-uppercontent span:nth-child(2) {
+    padding: 1em;
+    width: 100%;
+    border-right: none;
+    border-left: none;
+}
+
+.study .area-uppercontent span:nth-child(3) {
+    margin-left: auto;
+    border-left: none;
+}
+
+.study .area span {
+    min-width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: auto;
+    font-size: .9rem;
+    font-weight: 600;
+    border: solid 1px rgb(214, 214, 214);
+}
+
+.study .area {
+    background-color: white;
+    color: black;
+}
+
+.study .area1 .bear {
+    border-top-left-radius: 1.3em;
+}
+
+.study .area1 {
+    border-top-left-radius: 1.3em;
+    border-top-right-radius: 1.3em;
+}
+
+.study .area1 .plus {
+    border-top-right-radius: 1.3em;
+    font-size: .9rem;
+    border-right: none;
+    border-top: none;
+    font-weight: 900;
+}
+
+.study .area .plus i {
+    padding: .4em;
+    border-radius: 50%;
+    color: white;
+}
+
+.study .area1 .plus i {
+    background-color: rgb(255, 72, 128);
+}
+
+.study .area2 .plus i {
+    background-color: rgb(255, 192, 0);
+}
+
+.study .area3 .plus i {
+    background-color: rgb(171, 205, 82);
+}
+
+.study .area4 .plus i {
+    background-color: rgb(26, 185, 255);
+}
+
+.study .area5 .plus i {
+    background-color: rgb(39, 19, 68);
+}
+
+
+/*====================================================================
+CLASSES
+====================================================================*/
+
+.classes,
+.classes-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.classes-header span {
+    padding: 0 2.19em;
+    text-align: center;
+}
+
+.classes {
+    padding: 2em 1.24em 0;
+}
+
+.pink-text {
+    color: rgb(255, 72, 128);
+}
+
+.classes .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1.6em;
+}
+
+.classes .card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.5em;
+}
+
+.classes .bee {
+    margin: 1em 0;
+}
+
+.classes .card h3 {
+    color: rgb(255, 124, 8);
+    font-size: 1rem;
+    margin: 1em 0 0 0;
+}
+
+.classes .card p {
+    margin: 0 0 3em 0;
+}
+
+.classes .card hr {
+    border-top: solid rgba(255, 123, 8, 0.431) 1px;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    margin-bottom: .5em;
+}
+
+.classes .card .fa-baby {
+    color: rgb(72, 209, 26);
+}
+
+.classes .card a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(72, 209, 26);
+    padding: .5em 1.24em;
+    border-top-left-radius: 1.3em;
+    border-bottom-right-radius: 1.3em;
+    text-shadow: 0 2px 5px rgb(105, 105, 105);
+    box-shadow: 0 0 10px rgb(105, 105, 105);
+}
+
+.classes .card .gray-spanCard {
+    font-weight: 600;
+    color: rgb(128, 128, 128);
+    font-size: .95rem;
+}
+
+
+/*================================================================
+TESTYMONIALS
+===============================================================*/
+
+.tastymonials {
+    background-color: rgb(252, 249, 244);
+    padding: 2em 1.24em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tastymonials .title,
+.tastymonials .subtitle {
+    padding: 0 1em;
+    text-align: center;
+    margin: 7px 0;
+}
+
+.tastymonials .title {
+    font-size: 1.1rem;
+}
+
+.tastymonials .subtitle {
+    font-size: 1.8rem;
+}
+
+.tastymonials span {
+    text-align: center;
+}
+
+.tastymonials .bee {
+    margin: 1em 0 4em 0;
+}
+
+.tastymonials .swipe-container {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    overflow: scroll;
+}
+
+.tastymonials .swipe-container .sw-card {
+    min-width: 260px;
+    margin: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 2em 0 2em 1em;
+}
+
+.tastymonials .swipe-container .sw-card img {
+    width: 65px;
+    height: 65px;
+    border: solid 2px rgb(255, 72, 128);
+    border-radius: 50%;
+    margin-bottom: 1.7em;
+}
+
+.tastymonials .swipe-container .sw-card span {
+    text-align: left;
+}
+
+.tastymonials .swipe-container .sw-card .t-stars {
+    color: rgb(255, 192, 0);
+    margin: .5em 0;
+}
+
+.tastymonials .swipe-container .sw-card span {
+    color: rgb(39, 19, 68);
+    font-weight: 800;
+}
+
+.tastymonials .swipe-container::-webkit-scrollbar {
+    display: none;
 }
