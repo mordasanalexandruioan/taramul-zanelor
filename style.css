@@ -134,6 +134,108 @@ body {
 }
 
 
+/*===================================================================
+ANIMATIONS
+===================================================================*/
+
+@keyframes animationBird {
+    0% {
+        transform: translateY(40px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes animationClouds {
+    0% {
+        transform: translateX(30px);
+    }
+    100% {
+        transform: translateX(-30px);
+    }
+}
+
+@keyframes introText {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes buttonAnimation {
+    0% {
+        transform: rotate(-90deg);
+        left: -10em;
+        bottom: 11em;
+    }
+    100% {
+        transform: rotate(0deg);
+        left: 1.5em;
+        bottom: 11em;
+    }
+}
+
+@keyframes greenCard {
+    0% {
+        transform: translateY(15px);
+    }
+    25%,
+    50% {
+        transform: translateY(-15px);
+    }
+    75%,
+    40% {
+        transform: translateY(7px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes bee {
+    0% {
+        transform: translateX(30px);
+    }
+    100% {
+        transform: translateX(-30px);
+    }
+}
+
+@keyframes signUpText {
+    0% {
+        opacity: 0;
+    }
+    50%,
+    100% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+}
+
+@keyframes signUpButton {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    35% {
+        transform: scaleX(1.2) scaleY(1);
+    }
+    65% {
+        transform: scaleX(.8) scaleY(1.1);
+    }
+    85% {
+        transform: scaleX(1.1) scaleY(1.2);
+    }
+}
+
+
 /*=================================================================
 INTRO SITE
 =================================================================*/
@@ -143,19 +245,28 @@ INTRO SITE
     background: url(img/a-child-playing-with-a-wooden-plane-Stock-Photo-05.webp) no-repeat left/cover;
     display: flex;
     flex-direction: column;
-    padding: 0 1.3em;
+    padding: 1em 1.3em 3em;
     font-size: 1.2rem;
     font-weight: 600;
     position: relative;
     overflow: hidden;
 }
 
-.intro-site img {
+.intro-site .cloud {
     max-width: 250px;
+    animation: animationClouds 2s backwards infinite alternate-reverse;
 }
 
-.intro-site img:first-child {
+.intro-site .bird {
     width: 100px;
+    margin: 0 auto;
+    animation: animationBird 1s linear infinite alternate-reverse;
+}
+
+.intro-site .intro-text {
+    display: flex;
+    flex-direction: column;
+    animation: introText 1.2s forwards;
 }
 
 .title {
@@ -204,6 +315,13 @@ INTRO SITE
     border-radius: 50%;
     font-size: .88rem;
     margin-left: 1em;
+}
+
+.intro-site .button {
+    position: absolute;
+    left: 1.5em;
+    bottom: 11em;
+    animation: buttonAnimation .8s linear;
 }
 
 .intro-site img,
@@ -315,6 +433,7 @@ CHOSE US
 .choseUs-cards .cGreen {
     background-color: rgb(171, 205, 82);
     border-bottom: solid 10px rgb(147, 180, 61);
+    animation: greenCard .9s linear;
 }
 
 .choseUs-cards .cBlue {
@@ -325,6 +444,7 @@ CHOSE US
 .choseUs-signUp {
     padding: 0 1.9em 1.24em;
     text-align: left;
+    animation: signUpText .8s forwards;
 }
 
 .choseUs-signUp span {
@@ -343,6 +463,17 @@ CHOSE US
     margin-bottom: 2em;
 }
 
+.choseUs .bee {
+    animation: bee 2s forwards infinite alternate;
+}
+
+.choseUs .button {
+    margin-bottom: 1em;
+    margin-left: 1.24em;
+    align-self: flex-start;
+    animation: signUpButton .6s forwards;
+}
+
 
 /*====================================================================
 GUIDE
@@ -356,6 +487,7 @@ GUIDE
 
 .guide img {
     width: 100%;
+    animation: bee 2s forwards infinite alternate;
 }
 
 .guide h2 {
@@ -791,4 +923,199 @@ TESTYMONIALS
 
 .tastymonials .swipe-container::-webkit-scrollbar {
     display: none;
+}
+
+
+/*==============================================================
+STATS
+==============================================================*/
+
+.stats {
+    background-color: rgb(171, 205, 82);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 0;
+    color: white;
+}
+
+.stats .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+    height: 240px;
+    border: dashed 3px white;
+    border-radius: 50%;
+    margin-bottom: 3em;
+}
+
+.stats .box:last-child {
+    margin-bottom: 0;
+}
+
+.stats .box i {
+    font-size: 3rem;
+}
+
+.stats .box .stats-1span {
+    font-size: 1.7rem;
+    font-weight: 900;
+    margin: .4em .2em 0;
+}
+
+.stats .box span {
+    font-weight: 800;
+}
+
+
+/*================================================================
+TEACHERS
+===============================================================*/
+
+.teachers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2em 1.24em;
+}
+
+.teachers .pink-text,
+.teachers .title-color,
+.teachers .gray-text {
+    margin: .1em 0;
+}
+
+.teachers .pink-text {
+    font-weight: 300;
+    font-size: 1.05rem;
+}
+
+.teachers .title-color {
+    font-size: 2rem;
+}
+
+.teachers .bee {
+    margin-bottom: 1em;
+}
+
+.teachers a {
+    text-decoration: none;
+    border: solid 1px rgb(255, 72, 128);
+    color: rgb(255, 72, 128);
+    font-weight: 800;
+    padding: .8em 1.2em;
+    border-radius: .8em;
+}
+
+.teachers a i {
+    color: white;
+    background-color: rgb(255, 72, 128);
+    padding: .6em;
+    border-radius: 50%;
+    font-size: .8rem;
+    margin-left: .5em;
+}
+
+
+/*================================================================
+HOLIDAYS
+===============================================================*/
+
+.holidays {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(99, 85, 119);
+    padding: 3em 1.24em;
+    text-align: center;
+}
+
+.holidays .button {
+    width: 267px;
+}
+
+.holidays .notice {
+    background-color: rgb(255, 192, 0);
+    padding: .8em 1.2em;
+    border: solid 2px white;
+    border-radius: 2em;
+    font-weight: 600;
+}
+
+.holidays p {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: white;
+}
+
+.holidays .time {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 30px;
+    min-width: 270px;
+    max-width: 350px;
+    margin-bottom: 2em;
+}
+
+.holidays .time .time-item {
+    border-radius: 1.4em;
+    height: 84px;
+    color: white;
+}
+
+.holidays .time .time-item .time-nmb,
+.holidays .time .time-item .time-text {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.holidays .time .time-item .time-nmb {
+    border-top-left-radius: .9em;
+    border-top-right-radius: .9em;
+}
+
+.holidays .time .time-item:nth-child(1) {
+    border: solid 2px rgb(255, 102, 102);
+}
+
+.holidays .time .time-item:nth-child(1) .time-nmb {
+    background-color: rgb(255, 102, 102, .3);
+    border-bottom: solid 2px rgb(255, 102, 102);
+}
+
+.holidays .time .time-item:nth-child(2) {
+    border: solid 2px rgb(255, 192, 0);
+}
+
+.holidays .time .time-item:nth-child(2) .time-nmb {
+    background-color: rgb(255, 192, 0, .3);
+    border-bottom: solid 2px rgb(255, 192, 0);
+}
+
+.holidays .time .time-item:nth-child(3) {
+    border: solid 2px rgb(171, 205, 82);
+}
+
+.holidays .time .time-item:nth-child(3) .time-nmb {
+    background-color: rgb(171, 205, 82, .3);
+    border-bottom: solid 2px rgb(171, 205, 82);
+}
+
+.holidays .time .time-item:nth-child(4) {
+    border: solid 2px rgb(26, 185, 255);
+}
+
+.holidays .time .time-item:nth-child(4) .time-nmb {
+    background-color: rgb(26, 185, 255, .3);
+    border-bottom: solid 2px rgb(26, 185, 255);
 }
