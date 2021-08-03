@@ -167,6 +167,35 @@ ANIMATIONS
     }
 }
 
+@keyframes reverseIntroText {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes introGuide {
+    0% {
+        transform: translateY(70px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes rotateText {
+    0% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 @keyframes buttonAnimation {
     0% {
         transform: rotate(-90deg);
@@ -206,6 +235,15 @@ ANIMATIONS
     }
 }
 
+@keyframes toLeft {
+    0% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
 @keyframes signUpText {
     0% {
         opacity: 0;
@@ -232,6 +270,30 @@ ANIMATIONS
     }
     85% {
         transform: scaleX(1.1) scaleY(1.2);
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+    20%,
+    60% {
+        transform: rotate(5deg) scale(1.1);
+    }
+    40%,
+    80% {
+        transform: rotate(-5deg) scale(1.1);
+    }
+}
+
+@keyframes scaleAnim {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
     }
 }
 
@@ -500,6 +562,10 @@ GUIDE
     font-weight: 500;
 }
 
+.guide .guide-firstP {
+    animation: introText .9s forwards;
+}
+
 .guide .guide-secondP {
     padding: 0 .4em;
 }
@@ -513,12 +579,18 @@ GUIDE
     font-weight: 600;
 }
 
+.guide .guide-thirdP {
+    transform-origin: bottom right;
+    animation: rotateText .9s forwards;
+}
+
 .guide .button {
     color: rgb(255, 72, 128);
-    border: solid 2px rgb(255, 72, 128);
+    border: solid 1px rgb(255, 72, 128);
     background-color: transparent;
     font-weight: 600;
-    margin: .5em auto;
+    margin: 3em auto;
+    animation: shake .5s forwards;
 }
 
 .guide .button i {
@@ -543,6 +615,10 @@ OUR VALUES
     padding: 0 1.24em;
 }
 
+.ourValues .oV-header .sun {
+    animation: bee 3s forwards infinite alternate;
+}
+
 .oV-header {
     text-align: center;
     padding-top: 3em;
@@ -563,6 +639,7 @@ OUR VALUES
 .oV-header .rocket,
 .ourValues .rac {
     margin: 3em 0;
+    animation: animationBird 1.7s linear infinite alternate;
 }
 
 .ourValues .ov-img {
@@ -626,12 +703,22 @@ OUR VALUES
     width: 134px;
     padding: 0;
     margin-left: auto;
+    animation: introText 1s forwards;
 }
 
 .child {
     width: 100%;
     margin: 3em 0;
     min-width: 303px;
+    animation: scaleAnim 1s forwards;
+}
+
+.ov-trust {
+    animation: introText 1s forwards;
+}
+
+.ov-development {
+    animation: reverseIntroText 1s forwards;
 }
 
 
@@ -653,6 +740,7 @@ STUDY
 
 .study .bee {
     width: 99px;
+    animation: toLeft 1s forwards;
 }
 
 .study h2 {
