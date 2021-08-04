@@ -297,6 +297,16 @@ ANIMATIONS
     }
 }
 
+@keyframes scale2 {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
 
 /*=================================================================
 INTRO SITE
@@ -862,6 +872,20 @@ CLASSES
     justify-content: center;
 }
 
+.classes-header {
+    animation: scale2 1s linear;
+}
+
+.classes-header h2 {
+    margin: .2em 0;
+    font-size: 2.4rem;
+    line-height: 1;
+}
+
+.classes h3 {
+    margin: 0;
+}
+
 .classes-header span {
     padding: 0 2.19em;
     text-align: center;
@@ -892,6 +916,7 @@ CLASSES
 
 .classes .bee {
     margin: 1em 0;
+    animation: signUpText 1s linear;
 }
 
 .classes .card h3 {
@@ -946,6 +971,7 @@ TESTYMONIALS
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .tastymonials .title,
@@ -953,6 +979,11 @@ TESTYMONIALS
     padding: 0 1em;
     text-align: center;
     margin: 7px 0;
+    animation: reverseIntroText 1s forwards;
+}
+
+.tastymonials .gray-text {
+    animation: reverseIntroText 1s forwards;
 }
 
 .tastymonials .title {
@@ -969,6 +1000,7 @@ TESTYMONIALS
 
 .tastymonials .bee {
     margin: 1em 0 4em 0;
+    animation: signUpText 1s linear
 }
 
 .tastymonials .swipe-container {
@@ -1076,6 +1108,7 @@ TEACHERS
 .teachers .title-color,
 .teachers .gray-text {
     margin: .1em 0;
+    animation: scale2 1s linear;
 }
 
 .teachers .pink-text {
@@ -1088,7 +1121,8 @@ TEACHERS
 }
 
 .teachers .bee {
-    margin-bottom: 1em;
+    margin: 1.5em 0;
+    animation: signUpText 1s linear;
 }
 
 .teachers a {
@@ -1098,6 +1132,7 @@ TEACHERS
     font-weight: 800;
     padding: .8em 1.2em;
     border-radius: .8em;
+    animation: introText 1s forwards;
 }
 
 .teachers a i {
@@ -1134,6 +1169,7 @@ HOLIDAYS
     border: solid 2px white;
     border-radius: 2em;
     font-weight: 600;
+    animation: scale2 1.6s ease-out infinite alternate;
 }
 
 .holidays p {
