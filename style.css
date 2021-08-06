@@ -1243,3 +1243,108 @@ HOLIDAYS
     background-color: rgb(26, 185, 255, .3);
     border-bottom: solid 2px rgb(26, 185, 255);
 }
+
+
+/*==========================================================
+NEWS
+==========================================================*/
+
+.news {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em 1.24em;
+    text-align: center;
+}
+
+.news .news-content img {
+    width: 100%;
+    margin: 1em 0;
+}
+
+.news .bee {
+    margin: 1em 0;
+    animation: bee 2s linear infinite alternate;
+}
+
+.news h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 0;
+}
+
+.news h2 {
+    margin: .3em 0;
+    font-size: 2rem;
+}
+
+.news .news-content {
+    text-align: left;
+}
+
+.news .gray-text {
+    font-size: 1.1rem;
+}
+
+.news .news-content a {
+    text-decoration: none;
+    color: rgb(255, 72, 128);
+    font-weight: 600;
+}
+
+.news .news-content a:nth-child(2) {
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+.news .news-content a:nth-child(4) {
+    position: relative;
+}
+
+.news .news-content a:nth-child(4):before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(255, 72, 128);
+}
+
+
+/*=================================================
+JOIN US
+================================================*/
+
+.joinUs {
+    background-color: rgb(171, 205, 82);
+    color: #fff;
+    padding: 3em 1.24em 2em;
+    line-height: 1.2;
+}
+
+.joinUs p {
+    font-size: 1.57rem;
+    font-weight: 900;
+    margin: .3em 0;
+}
+
+.joinUs p span {
+    color: rgb(255, 72, 128);
+}
+
+.joinUs p:nth-child(2) {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+}
+
+.joinUs a {
+    width: 150px;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 2em;
+}
