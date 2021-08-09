@@ -200,12 +200,12 @@ ANIMATIONS
     0% {
         transform: rotate(-90deg);
         left: -10em;
-        bottom: 11em;
+        bottom: 8em;
     }
     100% {
         transform: rotate(0deg);
         left: 1.5em;
-        bottom: 11em;
+        bottom: 8em;
     }
 }
 
@@ -392,7 +392,12 @@ INTRO SITE
 .intro-site .button {
     position: absolute;
     left: 1.5em;
-    bottom: 11em;
+    bottom: 8em;
+    opacity: 0;
+}
+
+.intro-site .button.appear {
+    opacity: 1;
     animation: buttonAnimation .8s linear;
 }
 
@@ -505,6 +510,9 @@ CHOSE US
 .choseUs-cards .cGreen {
     background-color: rgb(171, 205, 82);
     border-bottom: solid 10px rgb(147, 180, 61);
+}
+
+.choseUs-cards .cGreen.appear {
     animation: greenCard .9s linear;
 }
 
@@ -516,6 +524,9 @@ CHOSE US
 .choseUs-signUp {
     padding: 0 1.9em 1.24em;
     text-align: left;
+}
+
+.choseUs-signUp .text.appear {
     animation: signUpText .8s forwards;
 }
 
@@ -543,6 +554,9 @@ CHOSE US
     margin-bottom: 1em;
     margin-left: 1.24em;
     align-self: flex-start;
+}
+
+.choseUs .button.appear {
     animation: signUpButton .6s forwards;
 }
 
@@ -572,7 +586,7 @@ GUIDE
     font-weight: 500;
 }
 
-.guide .guide-firstP {
+.guide .guide-firstP.appear {
     animation: introText .9s forwards;
 }
 
@@ -591,7 +605,12 @@ GUIDE
 
 .guide .guide-thirdP {
     transform-origin: bottom right;
+    opacity: 0;
+}
+
+.guide .guide-thirdP.appear {
     animation: rotateText .9s forwards;
+    opacity: 1;
 }
 
 .guide .button {
@@ -600,6 +619,9 @@ GUIDE
     background-color: transparent;
     font-weight: 600;
     margin: 3em auto;
+}
+
+.guide .button.appear {
     animation: shake .5s forwards;
 }
 
@@ -713,22 +735,39 @@ OUR VALUES
     width: 134px;
     padding: 0;
     margin-left: auto;
+}
+
+.ourValues .ov-connect.appear {
     animation: introText 1s forwards;
+    opacity: 1;
 }
 
 .child {
     width: 100%;
     margin: 3em 0;
     min-width: 303px;
+}
+
+.child.appear {
     animation: scaleAnim 1s forwards;
+    opacity: 1;
 }
 
-.ov-trust {
+.ov-trust,
+.ov-development,
+.child,
+.ov-connect {
+    opacity: 0;
+}
+
+.ov-trust.appear {
     animation: introText 1s forwards;
+    opacity: 1;
 }
 
-.ov-development {
+.ov-development.appear {
     animation: reverseIntroText 1s forwards;
+    opacity: 1;
 }
 
 
@@ -739,7 +778,7 @@ STUDY
 .study {
     background-color: rgb(39, 19, 68);
     color: #fff;
-    padding: 3em 1.24em 0;
+    padding: 3em 1.24em 4em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -750,6 +789,9 @@ STUDY
 
 .study .bee {
     width: 99px;
+}
+
+.beeSlide.appear {
     animation: toLeft 1s forwards;
 }
 
@@ -782,9 +824,23 @@ STUDY
     height: 31px;
 }
 
+.study .area {
+    background-color: white;
+    color: black;
+    overflow: hidden;
+}
+
 .study .area-uppercontent {
     display: flex;
     flex-direction: row;
+    position: relative;
+}
+
+.study .area-downcontent {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 .study .area-uppercontent span:nth-child(2) {
@@ -809,11 +865,6 @@ STUDY
     font-size: .9rem;
     font-weight: 600;
     border: solid 1px rgb(214, 214, 214);
-}
-
-.study .area {
-    background-color: white;
-    color: black;
 }
 
 .study .area1 .bear {
@@ -872,7 +923,7 @@ CLASSES
     justify-content: center;
 }
 
-.classes-header {
+.classes-header.appear {
     animation: scale2 1s linear;
 }
 
@@ -916,6 +967,9 @@ CLASSES
 
 .classes .bee {
     margin: 1em 0;
+}
+
+.blinkBee.appear {
     animation: signUpText 1s linear;
 }
 
