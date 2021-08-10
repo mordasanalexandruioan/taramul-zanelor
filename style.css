@@ -59,6 +59,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 100;
+    width: 100%;
+    background-color: white;
+}
+
+.nav-scrolled {
+    position: fixed;
+    top: 0;
 }
 
 .bottom-header-conatiner {
@@ -827,20 +835,31 @@ STUDY
 .study .area {
     background-color: white;
     color: black;
+    overflow: visible;
+}
+
+.study .areas {
     overflow: hidden;
+    border-radius: 1em;
 }
 
 .study .area-uppercontent {
     display: flex;
     flex-direction: row;
+}
+
+.study .area-header {
+    display: flex;
+    flex-direction: column;
     position: relative;
 }
 
 .study .area-downcontent {
     position: absolute;
     left: 0;
-    bottom: 0;
+    top: 100%;
     width: 100%;
+    padding: .6em;
 }
 
 .study .area-uppercontent span:nth-child(2) {
@@ -867,17 +886,7 @@ STUDY
     border: solid 1px rgb(214, 214, 214);
 }
 
-.study .area1 .bear {
-    border-top-left-radius: 1.3em;
-}
-
-.study .area1 {
-    border-top-left-radius: 1.3em;
-    border-top-right-radius: 1.3em;
-}
-
 .study .area1 .plus {
-    border-top-right-radius: 1.3em;
     font-size: .9rem;
     border-right: none;
     border-top: none;
@@ -888,6 +897,12 @@ STUDY
     padding: .4em;
     border-radius: 50%;
     color: white;
+}
+
+.study .area .plus .fa-times {
+    font-size: .7rem;
+    padding: .5rem;
+    display: none;
 }
 
 .study .area1 .plus i {
