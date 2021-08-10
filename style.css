@@ -24,7 +24,8 @@ body {
 }
 
 .top-header span:nth-child(2),
-.top-header span:nth-child(3) {
+.top-header span:nth-child(3),
+.top-header span:nth-child(5) {
     display: none;
 }
 
@@ -685,36 +686,83 @@ OUR VALUES
 .ourValues .ov-img {
     width: 35px;
     height: 35px;
+    z-index: 1;
 }
 
-.oV-love .ov-img {
+.ovImgBox-love:before,
+.ovImgBox-trust:before,
+.ovImgBox-dev:before,
+.ovImgBox-cautation:before,
+.ovImgBox-connect:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    min-width: 80px;
+    height: 100%;
+    min-height: 80px;
+    border-radius: 50%;
+}
+
+.ovImgBox-love:after,
+.ovImgBox-trust:after,
+.ovImgBox-dev:after,
+.ovImgBox-cautation:after,
+.ovImgBox-connect:after {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.ovImgBox-love:after {
     background-color: rgb(226, 85, 85);
 }
 
-.ov-trust .ov-img {
+.ovImgBox-love:before {
+    border: dashed 1px rgb(226, 85, 85);
+}
+
+.ovImgBox-trust:after {
     background-color: rgb(64, 239, 129);
 }
 
-.ov-development .ov-img {
+.ovImgBox-trust:before {
+    border: dashed 1px rgb(64, 239, 129);
+}
+
+.ovImgBox-dev:after {
     background-color: rgb(26, 185, 255);
 }
 
-.ov-cautation .ov-img {
+.ovImgBox-dev:before {
+    border: dashed 1px rgb(26, 185, 255);
+}
+
+.ovImgBox-cautation:after {
     background-color: rgb(255, 192, 0);
 }
 
-.ov-connect .ov-img {
+.ovImgBox-cautation:before {
+    border: dashed 1px rgb(255, 192, 0);
+}
+
+.ovImgBox-connect:after {
     background-color: rgb(235, 213, 156);
 }
 
-.oV-love .ov-img,
-.ov-trust .ov-img,
-.ov-development .ov-img,
-.ov-cautation .ov-img,
-.ov-connect .ov-img {
-    padding: 1.1em;
+.ovImgBox-connect:before {
+    border: dashed 1px rgb(235, 213, 156);
+}
+
+.ov-img-box {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
-    margin-bottom: 1em;
+    position: relative;
 }
 
 .oV-love,
@@ -754,6 +802,7 @@ OUR VALUES
     width: 100%;
     margin: 3em 0;
     min-width: 303px;
+    max-width: 383px;
 }
 
 .child.appear {
@@ -1416,4 +1465,41 @@ JOIN US
     text-transform: uppercase;
     font-weight: 800;
     margin-bottom: 2em;
+}
+
+@media (min-width:576px) {
+    .top-header {
+        justify-content: center;
+    }
+    .top-header span:nth-child(4) {
+        display: none;
+    }
+    .top-header span:nth-child(5) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(26, 185, 255);
+        padding: .3em .5em;
+        border-radius: 50%;
+        margin-left: .7em;
+    }
+    .top-header span:nth-child(5) i {
+        margin: 0;
+        font-size: .9rem;
+        font-weight: 100;
+        color: white;
+    }
+    .intro-site .cloud {
+        max-width: 550px;
+        margin: 0 auto;
+    }
+    .oV-love,
+    .ov-trust {
+        flex-direction: row-reverse;
+        text-align: right;
+        padding: 0 1.24em 0 0;
+    }
+    .ov-content {
+        margin-right: 2em;
+    }
 }
