@@ -1502,4 +1502,29 @@ JOIN US
     .ov-content {
         margin-right: 2em;
     }
+    .ov-development,
+    .ov-cautation,
+    .ov-connect {
+        flex-direction: row;
+    }
+    .ov-development .ov-content,
+    .ov-cautation .ov-content,
+    .ov-connect .ov-content {
+        margin: 0 0 0 2em;
+    }
+    .ov-cautation {
+        padding-right: 0;
+    }
+    .ov-cautation .ov-content {
+        padding-right: 2em;
+        margin: 0;
+    }
+    .ovImgBox-cautation {
+        margin-right: 2em;
+        margin-left: .8em;
+    }
+    .ov-connect {
+        margin: 0 auto;
+        min-width: 250px;
+    }
 }
